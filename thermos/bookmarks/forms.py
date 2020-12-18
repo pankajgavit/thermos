@@ -5,7 +5,7 @@ from wtforms.validators import DataRequired, url, Regexp
 
 
 class BookmarkForm(Form):
-    url = URLField('The URL for your bookmark', validators=[DataRequired(), url()])
+    url = URLField('The URL for your bookmark')
     description = StringField('Add an optional description')
     tags = StringField('Tags', validators=[Regexp(r'^[a-zA-Z0-9, ]*$',
                                                   message='Tags can only contain letters and numbers')])
